@@ -1,5 +1,3 @@
-nce upon a time
-
 import argparse
 import fileinput
 import functools
@@ -40,7 +38,7 @@ if args.engine not in engines:
 
 
 prompt = ""
-for line in fileinput.input():
+for line in sys.stdin:
     prompt += line
 prompt = prompt.strip()
 response = openai.Completion.create(
